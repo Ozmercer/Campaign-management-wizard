@@ -9,7 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./campaigns-list.component.scss']
 })
 export class CampaignsListComponent implements OnInit {
-    campaigns: {};
+    campaigns: any;
+    filteredCampaigns = [];
 
   constructor(private campignService: CampaignService,
               private router: Router) { }
@@ -18,9 +19,10 @@ export class CampaignsListComponent implements OnInit {
     this.campignService.getDataAsync().subscribe(
         (campaigns) => {
             this.campaigns = Object.values(campaigns);
-            console.log(moment('2018-08-09').format('MMM Do, YYYY'));
+            this.filteredCampaigns = [...this.campaigns];
         }
     )
+    
   }
 
   editCampaign(idx) {
@@ -29,5 +31,11 @@ export class CampaignsListComponent implements OnInit {
     this.campignService.editMode = true;
     this.campignService.buildMode = true;
     this.router.navigate(['/campaign-wizard/targeting']);
+  }
+
+  filter(ev) {
+    this.filteredCampaigns = this.campaigns.filter(campaign => {
+        return campaign.name.toLowerCase().includes(ev)
+    })      
   }
 }

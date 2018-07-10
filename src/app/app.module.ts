@@ -18,6 +18,7 @@ import { AuthService } from './auth/auth.service';
 import { SegmentComponent } from './campaign-wizard/segment/segment.component';
 import { SummaryComponent } from './campaign-wizard/summary/summary.component';
 import { CampaignsListComponent } from './campaigns-list/campaigns-list.component';
+import { SearchComponent } from './campaigns-list/search/search.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { CampaignsListComponent } from './campaigns-list/campaigns-list.componen
     SegmentComponent,
     SummaryComponent,
     CampaignsListComponent,
+    SearchComponent,
 ],
 imports: [
     BrowserModule,

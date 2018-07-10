@@ -1,0 +1,36 @@
+%nav-buttons {
+    color: #fff;
+        cursor: pointer;
+        transition: all 0.15s;
+        &:hover {
+            color: #fb7837
+        }
+}
+
+.nav-bar {
+    padding: 20px;
+    width: 250px;
+    height: 100vh;
+    background: linear-gradient(180deg, #0070a6 0, #007adf);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 18 px;
+    font-weight: bold;
+    font-family: Brandon Grotesque,sans-serif;
+    a {
+        @extend %nav-buttons;
+        &:hover {
+            color: #ffbb00
+        }
+    }
+    ul {
+        padding: 0;
+        li {        
+            @extend %nav-buttons;
+            list-style: none;
+            margin: 15px 0;
+        }
+    }
+}
+

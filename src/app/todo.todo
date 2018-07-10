@@ -1,0 +1,15 @@
+progressComponent:
+* get nice 'V' sign for progressComponent
+* Capitalize stage names
+
+formComponent:
+* remove test navigation buttons
+
+authGaurd:
+* build guard to provent accesibility if not logged in
+
+fireBase:
+* use fireBase to login
+
+navigation: 
+* make arrows appear only when needed

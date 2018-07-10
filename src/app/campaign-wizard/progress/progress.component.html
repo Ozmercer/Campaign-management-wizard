@@ -1,0 +1,11 @@
+<ul class="campaign-progress">
+    <li *ngFor="let stage of stages; let i = index" (click)="changePage(i)">
+        <p class="title">{{stage}}</p>
+        <div 
+        class="circle" 
+        [ngClass]="{'active': i <= currPage}">
+        <span *ngIf="i >= currPage; else checked">{{i + 1}}</span>
+        <ng-template #checked><i class="fas fa-check"></i></ng-template></div>
+    </li>
+    <li class="dots"></li>
+</ul>

@@ -1,0 +1,62 @@
+@mixin input-icon($path) {
+    background: {
+        image: url($path);
+        size: 20px;
+        repeat: no-repeat;
+        position: right
+    }
+    background-position-x: 15px
+}
+
+.campaign-form {
+  .form-group {
+    max-width: 500px;
+    text-align: start
+  }
+
+  input {
+    height: 2.5rem;
+    border-radius: 20px;
+    color: #4c4c4c;
+    width: 100%;
+    box-shadow: 0 0.5rem 2.188rem 0.125rem rgba(68, 39, 108, 0.33);
+    margin-bottom: 1rem;
+    transition: 0.3s ease-in-out;
+  }
+
+  input {
+    margin: 5px 0 auto;
+    padding-left: 52px;
+  }
+
+  input[type="date"] {
+    text-align: end;
+    padding: 0;
+    @include input-icon('/assets/calendar.png');
+    direction: ltr;
+  }
+  input[type="number"] {
+    @include input-icon('/assets/dollar.png')
+  }
+
+  #name {
+    @include input-icon('/assets/file.png')
+  }
+
+  label {
+    font-size: 0.8em;
+    width: 100%;
+    text-align: left;
+  }
+
+  .help-block {
+    font-size: 14px;
+    color: red;
+    text-align: start;
+    margin: -8px;
+  }
+
+  .ng-invalid {
+      border: 1px solid red
+  }
+}

@@ -1,0 +1,9 @@
+<div class="nav-bar">
+    <ul class="campaings">
+        <li routerLink="/"><i class="fas fa-home"></i> Home</li>
+        <li *ngIf="loggedinUser" routerLink="/campaign-wizard/targeting"><i class="fas fa-plus"></i> Create Campaign</li>
+        <li *ngIf="loggedinUser" routerLink="/campaign-list"><i class="fas fa-bullhorn"></i> Campaigns</li>
+    </ul>
+    <a routerLink="/login" *ngIf="!loggedinUser">login</a>
+    <a (click)="onLogout()" *ngIf="loggedinUser">logout</a>
+</div>

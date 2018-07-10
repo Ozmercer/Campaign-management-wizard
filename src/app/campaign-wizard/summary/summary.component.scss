@@ -1,0 +1,17 @@
+.summary {
+  ul {
+    width: 300px;
+    margin: 40px auto;
+    list-style: none;
+    border: 3px solid #aec0cf;
+    padding: 20px;
+  }
+  li {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .bold {
+      font-weight: bold;
+  }
+}

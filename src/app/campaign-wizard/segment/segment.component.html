@@ -1,0 +1,12 @@
+<div class="segment cotainer">
+    <form class="campaign-segment" [formGroup]="campaignSegment" (ngSubmit)="onSubmit()">
+        <label>
+            devices
+            <select class="custom-select" multiple searchable="Search here.." formControlName="devices">
+                <option value="" disabled selected>Choose Device</option>
+                <option *ngFor="let device of deviceItems" value="{{device}}">{{device}}</option>
+            </select>
+        </label>
+    </form>
+    <app-navigate [validForm]="campaignSegment.valid" [currPage]="1"></app-navigate>
+</div>

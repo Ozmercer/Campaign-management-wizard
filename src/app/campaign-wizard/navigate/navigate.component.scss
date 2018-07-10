@@ -1,0 +1,15 @@
+.campaign-navigate {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    // background-color: #fff;
+
+    .btn {
+        font-size: 0.8em;
+        width: 100px
+    }
+    
+    .prev {
+        border: none
+    }
+}

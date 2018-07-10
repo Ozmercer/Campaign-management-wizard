@@ -1,0 +1,59 @@
+<form class="campaign-form" [formGroup]="campaignForm" (ngSubmit)="onSubmit()">
+    <div class="form-group container">
+        <h2 *ngIf="!editMode">Build a New Campaign</h2>
+        <h2 *ngIf="editMode">Edit Campaign</h2>
+        <label for="name">Campaign Name
+            <input 
+            id="name" 
+            name="name" 
+            class="form-control" 
+            type="text" 
+            formControlName="name">
+        </label>
+        <span *ngIf="!campaignForm.get('name').valid" class="help-block"> *Please fill in this field</span>
+        <label for="bid">Bid (Maximum CPC)
+            <input 
+            id="bid" 
+            name="bid" 
+            class="form-control" 
+            type="number" 
+            min="0" 
+            (input)="updateBid($event)"
+            formControlName="bid">
+        </label>
+        <br>
+        <label for="budget">Daily Budget
+            <input 
+            id="budget" 
+            name="budget" 
+            class="form-control" 
+            type="number" 
+            min="0" 
+            formControlName="budget">
+        </label>
+        <br>
+        <span *ngIf="campaignForm.get('budget').errors && campaignForm.get('budget').errors['lowBudget']" class="help-block">
+            *Bugget must be at least 10 times larger than bid
+            </span>
+        <label for="start">Start Date
+            <input 
+            id="start" 
+            name="start" 
+            class="form-control" 
+            type="date" 
+            [min]="now"
+            formControlName="start">
+        </label>
+        <br>
+        <label for="end">End Date
+            <input 
+            id="end" 
+            name="end" 
+            class="form-control" 
+            type="date" 
+            [min]="now"
+            formControlName="end">
+        </label>
+    </div>
+    <app-navigate [validForm]="campaignForm.valid" [currPage]="0"></app-navigate>
+</form>

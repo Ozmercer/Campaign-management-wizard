@@ -1,0 +1,16 @@
+<div class="campaign-navigate">
+    <div class="space-holder" *ngIf="currPage === 0"></div>
+    <button 
+    class="btn btn-outline-primary prev" 
+    *ngIf="currPage !== 0" 
+    (click)="prevPage()">🡰</button>
+    <button 
+    class="btn btn-primary next" 
+    *ngIf="currPage !== totalPages" 
+    (click)="nextPage()" 
+    [disabled]="!validForm">🡲</button>
+    <button 
+    class="btn btn-success submit" 
+    *ngIf="currPage === totalPages" 
+    (click)="onSubmit()">Submit</button>
+</div>

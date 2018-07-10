@@ -1,0 +1,13 @@
+<div class="summary">
+    <h2>{{campaignData.name}}</h2>
+    <hr>
+    <ul class="campaign-data">
+        <li class="data"><span class="bold">Daily Budget: </span>{{campaignData.budget}}$</li>
+        <li class="data"><span class="bold">Bid: </span>{{campaignData.bid}}$</li>
+        <li class="data"><span class="bold">Start Date: </span>{{campaignData.start}}</li>
+        <li class="data"><span class="bold">End Date: </span>{{campaignData.end}}</li>
+        <br><br>
+        <li class="data"><span class="bold">Devices: </span>{{devicesToShow}}</li>
+    </ul>
+    <app-navigate [currPage]="2"></app-navigate>
+</div>

@@ -1,0 +1,30 @@
+<div class="login container">
+    <form (ngSubmit)="onSignin(f)" #f="ngForm">
+        <div class="form-group">
+            <div class="form-group">
+                <!-- <label for="email">Email</label> -->
+                <input 
+                id="email"
+                name="email" 
+                ngModel 
+                class="form-control"
+                placeholder="Name" 
+                type="email">
+            </div>
+            <div class="form-group">
+                <!-- <label for="password">Password</label> -->
+                <input 
+                id="password" 
+                name="password" 
+                class="form-control" 
+                ngModel 
+                placeholder="password"
+                type="password">
+            </div>
+            <span class="buttons">
+                <button class="btn btn-primary" type="submit">Sign In</button>
+                <div class="signup-btn">New here? <a routerLink="/signup"> Sign Up!</a></div>
+            </span>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.app {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    background-color: #f5f7fc;
+}
